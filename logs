@@ -21163,3 +21163,847 @@ Traceback (most recent call last):
     raise NoReverseMatch(msg)
 django.urls.exceptions.NoReverseMatch: Reverse for 'test_case_detail' not found. 'test_case_detail' is not a valid view function or pattern name.
 "GET /test_case/ HTTP/1.1" 500 168900
+File E:\pythonProject\TestPlat\interfacetestplatform\templates\base.html previous mtime: 1646055002.3139548, current mtime: 1646065844.9062085
+E:\pythonProject\TestPlat\interfacetestplatform\templates\base.html notified as changed. Signal results: [(<function template_changed at 0x00000210944D3D30>, True), (<function translation_file_changed at 0x0000021094D48B80>, None)].
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:30:47.910366' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:30:47.910366', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_testcase`; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 1; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+Internal Server Error: /test_case/
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\pythonProject\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\pythonProject\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\pythonProject\TestPlat\interfacetestplatform\views.py", line 118, in test_case
+    return render(request, 'test_case.html', {'test_cases': get_paginator(request, test_cases)})
+  File "E:\pythonProject\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\defaulttags.py", line 214, in render
+    nodelist.append(node.render_annotated(context))
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\defaulttags.py", line 449, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "E:\pythonProject\venv\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "E:\pythonProject\venv\lib\site-packages\django\urls\resolvers.py", line 698, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'test_case_detail' not found. 'test_case_detail' is not a valid view function or pattern name.
+"GET /test_case/ HTTP/1.1" 500 169076
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:30:48.692518' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:30:48.692518', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_testcase`; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 1; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+Internal Server Error: /test_case/
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\pythonProject\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\pythonProject\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\pythonProject\TestPlat\interfacetestplatform\views.py", line 118, in test_case
+    return render(request, 'test_case.html', {'test_cases': get_paginator(request, test_cases)})
+  File "E:\pythonProject\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\defaulttags.py", line 214, in render
+    nodelist.append(node.render_annotated(context))
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\defaulttags.py", line 449, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "E:\pythonProject\venv\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "E:\pythonProject\venv\lib\site-packages\django\urls\resolvers.py", line 698, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'test_case_detail' not found. 'test_case_detail' is not a valid view function or pattern name.
+"GET /test_case/ HTTP/1.1" 500 169076
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:30:49.483785' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:30:49.483785', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.015) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_testcase`; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 1; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+Internal Server Error: /test_case/
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\pythonProject\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\pythonProject\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\pythonProject\TestPlat\interfacetestplatform\views.py", line 118, in test_case
+    return render(request, 'test_case.html', {'test_cases': get_paginator(request, test_cases)})
+  File "E:\pythonProject\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\defaulttags.py", line 214, in render
+    nodelist.append(node.render_annotated(context))
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\defaulttags.py", line 449, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "E:\pythonProject\venv\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "E:\pythonProject\venv\lib\site-packages\django\urls\resolvers.py", line 698, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'test_case_detail' not found. 'test_case_detail' is not a valid view function or pattern name.
+"GET /test_case/ HTTP/1.1" 500 169076
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:30:51.917673' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:30:51.917673', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+(0.000) INSERT INTO `specialtest_apidata` (`target_api`, `api_request_data`, `api_response_data`) VALUES ('project/', '<WSGIRequest: GET \'/project/\'>', '<HttpResponse status_code=200, \"text/html; charset=utf-8\">'); args=['project/', "<WSGIRequest: GET '/project/'>", '<HttpResponse status_code=200, "text/html; charset=utf-8">']
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+"GET /project/ HTTP/1.1" 200 4525
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:30:54.804169' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:30:54.804169', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_testcase`; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 1; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+Internal Server Error: /test_case/
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\pythonProject\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\pythonProject\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\pythonProject\TestPlat\interfacetestplatform\views.py", line 118, in test_case
+    return render(request, 'test_case.html', {'test_cases': get_paginator(request, test_cases)})
+  File "E:\pythonProject\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\defaulttags.py", line 214, in render
+    nodelist.append(node.render_annotated(context))
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "E:\pythonProject\venv\lib\site-packages\django\template\defaulttags.py", line 449, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "E:\pythonProject\venv\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "E:\pythonProject\venv\lib\site-packages\django\urls\resolvers.py", line 698, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'test_case_detail' not found. 'test_case_detail' is not a valid view function or pattern name.
+"GET /test_case/ HTTP/1.1" 500 168939
+File E:\pythonProject\TestPlat\interfacetestplatform\templates\test_case.html previous mtime: 1646054978.0012052, current mtime: 1646066125.0355978
+E:\pythonProject\TestPlat\interfacetestplatform\templates\test_case.html notified as changed. Signal results: [(<function template_changed at 0x00000210944D3D30>, True), (<function translation_file_changed at 0x0000021094D48B80>, None)].
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:35:28.515079' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:35:28.515079', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+(0.015) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_testcase`; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 1; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` WHERE `interfacetestplatform_project`.`id` = 1 LIMIT 21; args=(1,)
+Exception while resolving variable 'belong_module' in template 'test_case.html'.
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'TestCase' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'TestCase' object has no attribute 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [belong_module] in <TestCase: ²âÊÔ1>
+"GET /test_case/ HTTP/1.1" 200 4108
+File E:\pythonProject\TestPlat\interfacetestplatform\templates\test_case.html previous mtime: 1646066125.0355978, current mtime: 1646066186.1665764
+E:\pythonProject\TestPlat\interfacetestplatform\templates\test_case.html notified as changed. Signal results: [(<function template_changed at 0x00000210944D3D30>, True), (<function translation_file_changed at 0x0000021094D48B80>, None)].
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:36:27.238709' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:36:27.238709', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_testcase`; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 1; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` WHERE `interfacetestplatform_project`.`id` = 1 LIMIT 21; args=(1,)
+Exception while resolving variable 'belong_module' in template 'test_case.html'.
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'TestCase' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'TestCase' object has no attribute 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [belong_module] in <TestCase: ²âÊÔ1>
+"GET /test_case/ HTTP/1.1" 200 4557
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:36:36.308939' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:36:36.308939', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+(0.000) INSERT INTO `specialtest_apidata` (`target_api`, `api_request_data`, `api_response_data`) VALUES ('project/', '<WSGIRequest: GET \'/project/\'>', '<HttpResponse status_code=200, \"text/html; charset=utf-8\">'); args=['project/', "<WSGIRequest: GET '/project/'>", '<HttpResponse status_code=200, "text/html; charset=utf-8">']
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+"GET /project/ HTTP/1.1" 200 4525
+(0.016) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:36:41.605450' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:36:41.605450', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_testcase`; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 1; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` WHERE `interfacetestplatform_project`.`id` = 1 LIMIT 21; args=(1,)
+Exception while resolving variable 'belong_module' in template 'test_case.html'.
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'TestCase' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'TestCase' object has no attribute 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [belong_module] in <TestCase: ²âÊÔ1>
+"GET /test_case/ HTTP/1.1" 200 4557
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:36:42.280820' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:36:42.280820', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+(0.000) INSERT INTO `specialtest_apidata` (`target_api`, `api_request_data`, `api_response_data`) VALUES ('project/', '<WSGIRequest: GET \'/project/\'>', '<HttpResponse status_code=200, \"text/html; charset=utf-8\">'); args=['project/', "<WSGIRequest: GET '/project/'>", '<HttpResponse status_code=200, "text/html; charset=utf-8">']
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+"GET /project/ HTTP/1.1" 200 4525
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:36:44.030200' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:36:44.030200', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_testcase`; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 1; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` WHERE `interfacetestplatform_project`.`id` = 1 LIMIT 21; args=(1,)
+Exception while resolving variable 'belong_module' in template 'test_case.html'.
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'TestCase' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'TestCase' object has no attribute 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [belong_module] in <TestCase: ²âÊÔ1>
+"GET /test_case/ HTTP/1.1" 200 4557
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:36:44.552013' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:36:44.552013', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.016) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+(0.000) INSERT INTO `specialtest_apidata` (`target_api`, `api_request_data`, `api_response_data`) VALUES ('project/', '<WSGIRequest: GET \'/project/\'>', '<HttpResponse status_code=200, \"text/html; charset=utf-8\">'); args=['project/', "<WSGIRequest: GET '/project/'>", '<HttpResponse status_code=200, "text/html; charset=utf-8">']
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+"GET /project/ HTTP/1.1" 200 4525
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:36:45.984324' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:36:45.984324', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+(0.015) INSERT INTO `specialtest_apidata` (`target_api`, `api_request_data`, `api_response_data`) VALUES ('project/', '<WSGIRequest: GET \'/project/\'>', '<HttpResponse status_code=200, \"text/html; charset=utf-8\">'); args=['project/', "<WSGIRequest: GET '/project/'>", '<HttpResponse status_code=200, "text/html; charset=utf-8">']
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+"GET /project/ HTTP/1.1" 200 4525
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:36:47.145700' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:36:47.145700', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1 OFFSET 1; args=()
+(0.000) INSERT INTO `specialtest_apidata` (`target_api`, `api_request_data`, `api_response_data`) VALUES ('project/', '<WSGIRequest: GET \'/project/?page=2\'>', '<HttpResponse status_code=200, \"text/html; charset=utf-8\">'); args=['project/', "<WSGIRequest: GET '/project/?page=2'>", '<HttpResponse status_code=200, "text/html; charset=utf-8">']
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1 OFFSET 1; args=()
+"GET /project/?page=2 HTTP/1.1" 200 4519
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:36:48.519770' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:36:48.519770', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.015) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+(0.000) INSERT INTO `specialtest_apidata` (`target_api`, `api_request_data`, `api_response_data`) VALUES ('project/', '<WSGIRequest: GET \'/project/?page=1\'>', '<HttpResponse status_code=200, \"text/html; charset=utf-8\">'); args=['project/', "<WSGIRequest: GET '/project/?page=1'>", '<HttpResponse status_code=200, "text/html; charset=utf-8">']
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+"GET /project/?page=1 HTTP/1.1" 200 4525
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:36:50.005772' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:36:50.005772', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.016) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1 OFFSET 1; args=()
+(0.000) INSERT INTO `specialtest_apidata` (`target_api`, `api_request_data`, `api_response_data`) VALUES ('project/', '<WSGIRequest: GET \'/project/?page=2\'>', '<HttpResponse status_code=200, \"text/html; charset=utf-8\">'); args=['project/', "<WSGIRequest: GET '/project/?page=2'>", '<HttpResponse status_code=200, "text/html; charset=utf-8">']
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1 OFFSET 1; args=()
+"GET /project/?page=2 HTTP/1.1" 200 4519
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:36:50.776762' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:36:50.776762', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+(0.000) INSERT INTO `specialtest_apidata` (`target_api`, `api_request_data`, `api_response_data`) VALUES ('project/', '<WSGIRequest: GET \'/project/?page=1\'>', '<HttpResponse status_code=200, \"text/html; charset=utf-8\">'); args=['project/', "<WSGIRequest: GET '/project/?page=1'>", '<HttpResponse status_code=200, "text/html; charset=utf-8">']
+(0.016) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+"GET /project/?page=1 HTTP/1.1" 200 4525
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:36:51.860361' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:36:51.860361', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+(0.000) INSERT INTO `specialtest_apidata` (`target_api`, `api_request_data`, `api_response_data`) VALUES ('project/', '<WSGIRequest: GET \'/project/\'>', '<HttpResponse status_code=200, \"text/html; charset=utf-8\">'); args=['project/', "<WSGIRequest: GET '/project/'>", '<HttpResponse status_code=200, "text/html; charset=utf-8">']
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+"GET /project/ HTTP/1.1" 200 4525
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:36:52.242903' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:36:52.242903', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.015) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_testcase`; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 1; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` WHERE `interfacetestplatform_project`.`id` = 1 LIMIT 21; args=(1,)
+Exception while resolving variable 'belong_module' in template 'test_case.html'.
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'TestCase' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'TestCase' object has no attribute 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [belong_module] in <TestCase: ²âÊÔ1>
+"GET /test_case/ HTTP/1.1" 200 4557
+File E:\pythonProject\TestPlat\interfacetestplatform\templates\test_case.html previous mtime: 1646066186.1665764, current mtime: 1646066857.7924547
+E:\pythonProject\TestPlat\interfacetestplatform\templates\test_case.html notified as changed. Signal results: [(<function template_changed at 0x00000210944D3D30>, True), (<function translation_file_changed at 0x0000021094D48B80>, None)].
+File E:\pythonProject\TestPlat\interfacetestplatform\templates\test_case.html previous mtime: 1646066857.7924547, current mtime: 1646066885.0022242
+E:\pythonProject\TestPlat\interfacetestplatform\templates\test_case.html notified as changed. Signal results: [(<function template_changed at 0x00000210944D3D30>, True), (<function translation_file_changed at 0x0000021094D48B80>, None)].
+File E:\pythonProject\TestPlat\interfacetestplatform\templates\test_case.html previous mtime: 1646066885.0022242, current mtime: 1646066914.1341264
+E:\pythonProject\TestPlat\interfacetestplatform\templates\test_case.html notified as changed. Signal results: [(<function template_changed at 0x00000210944D3D30>, True), (<function translation_file_changed at 0x0000021094D48B80>, None)].
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:48:39.037743' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:48:39.037743', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_testcase`; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 1; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` WHERE `interfacetestplatform_project`.`id` = 1 LIMIT 21; args=(1,)
+Exception while resolving variable 'belong_module' in template 'test_case.html'.
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'TestCase' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'TestCase' object has no attribute 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [belong_module] in <TestCase: ²âÊÔ1>
+"GET /test_case/ HTTP/1.1" 200 6506
+File E:\pythonProject\TestPlat\interfacetestplatform\templates\test_case.html previous mtime: 1646066914.1341264, current mtime: 1646066960.2282658
+E:\pythonProject\TestPlat\interfacetestplatform\templates\test_case.html notified as changed. Signal results: [(<function template_changed at 0x00000210944D3D30>, True), (<function translation_file_changed at 0x0000021094D48B80>, None)].
+File E:\pythonProject\TestPlat\interfacetestplatform\templates\test_case.html previous mtime: 1646066960.2282658, current mtime: 1646066979.3174229
+E:\pythonProject\TestPlat\interfacetestplatform\templates\test_case.html notified as changed. Signal results: [(<function template_changed at 0x00000210944D3D30>, True), (<function translation_file_changed at 0x0000021094D48B80>, None)].
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:49:40.248794' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:49:40.248794', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_testcase`; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 1; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` WHERE `interfacetestplatform_project`.`id` = 1 LIMIT 21; args=(1,)
+Exception while resolving variable 'belong_module' in template 'test_case.html'.
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'TestCase' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'TestCase' object has no attribute 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [belong_module] in <TestCase: ²âÊÔ1>
+"GET /test_case/ HTTP/1.1" 200 6554
+File E:\pythonProject\TestPlat\interfacetestplatform\templates\test_case.html previous mtime: 1646066979.3174229, current mtime: 1646067107.9721026
+E:\pythonProject\TestPlat\interfacetestplatform\templates\test_case.html notified as changed. Signal results: [(<function template_changed at 0x00000210944D3D30>, True), (<function translation_file_changed at 0x0000021094D48B80>, None)].
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:51:49.484042' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:51:49.484042', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_testcase`; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 1; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` WHERE `interfacetestplatform_project`.`id` = 1 LIMIT 21; args=(1,)
+Exception while resolving variable 'belong_module' in template 'test_case.html'.
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'TestCase' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'TestCase' object has no attribute 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [belong_module] in <TestCase: ²âÊÔ1>
+"GET /test_case/ HTTP/1.1" 200 6646
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:52:21.558831' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:52:21.558831', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+(0.015) INSERT INTO `specialtest_apidata` (`target_api`, `api_request_data`, `api_response_data`) VALUES ('project/', '<WSGIRequest: GET \'/project/\'>', '<HttpResponse status_code=200, \"text/html; charset=utf-8\">'); args=['project/', "<WSGIRequest: GET '/project/'>", '<HttpResponse status_code=200, "text/html; charset=utf-8">']
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+"GET /project/ HTTP/1.1" 200 4525
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:52:24.751242' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:52:24.751242', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+"GET / HTTP/1.1" 200 3088
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:52:39.582600' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:52:39.582600', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.016) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+(0.016) INSERT INTO `specialtest_apidata` (`target_api`, `api_request_data`, `api_response_data`) VALUES ('project/', '<WSGIRequest: GET \'/project/\'>', '<HttpResponse status_code=200, \"text/html; charset=utf-8\">'); args=['project/', "<WSGIRequest: GET '/project/'>", '<HttpResponse status_code=200, "text/html; charset=utf-8">']
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+"GET /project/ HTTP/1.1" 200 4525
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:52:40.974815' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:52:40.974815', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_testcase`; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 1; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` WHERE `interfacetestplatform_project`.`id` = 1 LIMIT 21; args=(1,)
+Exception while resolving variable 'belong_module' in template 'test_case.html'.
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'TestCase' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'TestCase' object has no attribute 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [belong_module] in <TestCase: ²âÊÔ1>
+"GET /test_case/ HTTP/1.1" 200 6646
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:52:42.814212' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:52:42.814212', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+(0.000) INSERT INTO `specialtest_apidata` (`target_api`, `api_request_data`, `api_response_data`) VALUES ('project/', '<WSGIRequest: GET \'/project/\'>', '<HttpResponse status_code=200, \"text/html; charset=utf-8\">'); args=['project/', "<WSGIRequest: GET '/project/'>", '<HttpResponse status_code=200, "text/html; charset=utf-8">']
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+"GET /project/ HTTP/1.1" 200 4525
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:52:43.277959' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:52:43.277959', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_testcase`; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 1; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` WHERE `interfacetestplatform_project`.`id` = 1 LIMIT 21; args=(1,)
+Exception while resolving variable 'belong_module' in template 'test_case.html'.
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'TestCase' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'TestCase' object has no attribute 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [belong_module] in <TestCase: ²âÊÔ1>
+"GET /test_case/ HTTP/1.1" 200 6646
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:52:44.021412' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:52:44.021412', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+(0.000) INSERT INTO `specialtest_apidata` (`target_api`, `api_request_data`, `api_response_data`) VALUES ('project/', '<WSGIRequest: GET \'/project/\'>', '<HttpResponse status_code=200, \"text/html; charset=utf-8\">'); args=['project/', "<WSGIRequest: GET '/project/'>", '<HttpResponse status_code=200, "text/html; charset=utf-8">']
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+"GET /project/ HTTP/1.1" 200 4525
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:53:06.640854' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:53:06.640854', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+(0.000) INSERT INTO `specialtest_apidata` (`target_api`, `api_request_data`, `api_response_data`) VALUES ('project/', '<WSGIRequest: GET \'/project/\'>', '<HttpResponse status_code=200, \"text/html; charset=utf-8\">'); args=['project/', "<WSGIRequest: GET '/project/'>", '<HttpResponse status_code=200, "text/html; charset=utf-8">']
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+"GET /project/ HTTP/1.1" 200 4525
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:53:07.262822' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:53:07.262822', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_testcase`; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 1; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` WHERE `interfacetestplatform_project`.`id` = 1 LIMIT 21; args=(1,)
+Exception while resolving variable 'belong_module' in template 'test_case.html'.
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'TestCase' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'TestCase' object has no attribute 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [belong_module] in <TestCase: ²âÊÔ1>
+"GET /test_case/ HTTP/1.1" 200 6646
+(0.016) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:53:10.229488' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:53:10.229488', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_testcase`; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 1; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` WHERE `interfacetestplatform_project`.`id` = 1 LIMIT 21; args=(1,)
+Exception while resolving variable 'belong_module' in template 'test_case.html'.
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'TestCase' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'TestCase' object has no attribute 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [belong_module] in <TestCase: ²âÊÔ1>
+"GET /test_case/ HTTP/1.1" 200 6646
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:53:10.727485' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:53:10.727485', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+(0.015) INSERT INTO `specialtest_apidata` (`target_api`, `api_request_data`, `api_response_data`) VALUES ('project/', '<WSGIRequest: GET \'/project/\'>', '<HttpResponse status_code=200, \"text/html; charset=utf-8\">'); args=['project/', "<WSGIRequest: GET '/project/'>", '<HttpResponse status_code=200, "text/html; charset=utf-8">']
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_project`; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` ORDER BY `interfacetestplatform_project`.`id` DESC LIMIT 1; args=()
+"GET /project/ HTTP/1.1" 200 4525
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2022-03-01 00:53:11.535766' AND `django_session`.`session_key` = 'w7lv93tr9882z8k247q825dsbbmoqpfa') LIMIT 21; args=('2022-03-01 00:53:11.535766', 'w7lv93tr9882z8k247q825dsbbmoqpfa')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,)
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 21; args=()
+(0.000) SELECT COUNT(*) AS `__count` FROM `interfacetestplatform_testcase`; args=()
+(0.000) SELECT `interfacetestplatform_testcase`.`id`, `interfacetestplatform_testcase`.`case_name`, `interfacetestplatform_testcase`.`belong_project_id`, `interfacetestplatform_testcase`.`request_data`, `interfacetestplatform_testcase`.`uri`, `interfacetestplatform_testcase`.`assert_key`, `interfacetestplatform_testcase`.`maintainer`, `interfacetestplatform_testcase`.`extract_var`, `interfacetestplatform_testcase`.`request_method`, `interfacetestplatform_testcase`.`status`, `interfacetestplatform_testcase`.`created_time`, `interfacetestplatform_testcase`.`updated_time`, `interfacetestplatform_testcase`.`user_id` FROM `interfacetestplatform_testcase` ORDER BY `interfacetestplatform_testcase`.`id` ASC LIMIT 1; args=()
+(0.000) SELECT `interfacetestplatform_project`.`id`, `interfacetestplatform_project`.`name`, `interfacetestplatform_project`.`project_participant`, `interfacetestplatform_project`.`desc`, `interfacetestplatform_project`.`create_time`, `interfacetestplatform_project`.`update_time` FROM `interfacetestplatform_project` WHERE `interfacetestplatform_project`.`id` = 1 LIMIT 21; args=(1,)
+Exception while resolving variable 'belong_module' in template 'test_case.html'.
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'TestCase' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'TestCase' object has no attribute 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'belong_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\pythonProject\venv\lib\site-packages\django\template\base.py", line 848, in _resolve_lookup
+    raise VariableDoesNotExist("Failed lookup for key "
+django.template.base.VariableDoesNotExist: Failed lookup for key [belong_module] in <TestCase: ²âÊÔ1>
+"GET /test_case/ HTTP/1.1" 200 6646
