@@ -8,7 +8,9 @@ from django.http import HttpResponse
 from .form import UserForm
 import traceback
 import logging
+from . import models
 from .models import Project, TestCase
+from .task import case_task
 from specialtest.models import *
 
 # 封装分页处理
@@ -99,20 +101,51 @@ def logout(request):
 def getMember():
     pass
 
+# 获取接口路径
+def get_server_address(env):
+    if env:  # 环境处理
+        env_data = models.InterfaceServer.objects.filter(env=env[0])
+        print("env_data: {}".format(env_data))
+        if env_data:
+            ip = env_data[0].ip
+            port = env_data[0].port
+            print("ip: {}, port: {}".format(ip, port))
+            server_address = "http://{}:{}".format(ip, port)
+            print("server_address: {}".format(server_address))
+            return server_address
+        else:
+            return ""
+    else:
+        return ""
 
-# 测试用例菜单
+# 测试用例菜单项
 @login_required
 def test_case(request):
-    # print("request.session['is_login']: {}".format(request.session['is_login']))
+    print("request.session['is_login']: {}".format(request.session['is_login']))
     test_cases = ""
+    # 页面获取
     if request.method == "GET":
-        test_cases = TestCase.objects.filter().order_by('id')
-        print("testcases in testcase: {}".format(test_cases))
+        test_cases = models.TestCase.objects.filter().order_by('id')
+        print("testcases: {}".format(test_cases))
+    #     表单提交
     elif request.method == "POST":
         print("request.POST: {}".format(request.POST))
-        test_case_id_list = request.POST.getlist('testcases_list')
+        test_case_id_list = request.POST.getlist('test_cases_list')
+        env = request.POST.getlist('env')
+        print("env: {}".format(env))
+        server_address = get_server_address(env)
+        if not server_address:
+            return HttpResponse("提交的运行环境为空，请选择环境后再提交！")
         if test_case_id_list:
             test_case_id_list.sort()
             print("test_case_id_list: {}".format(test_case_id_list))
-        test_cases = TestCase.objects.filter().order_by('id')
+            print("获取到用例，开始用例执行")
+            # 普通执行
+            # case_task(test_case_id_list, server_address)
+            # celery 执行
+            case_task.apply_async((test_case_id_list, server_address))
+        else:
+            print("运行测试用例失败")
+            return HttpResponse("提交的运行测试用例为空，请选择用例后在提交！")
+        test_cases = models.TestCase.objects.filter().order_by('id')
     return render(request, 'test_case.html', {'test_cases': get_paginator(request, test_cases)})
