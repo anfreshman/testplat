@@ -11,7 +11,6 @@ import logging
 from . import models
 from .models import Project, TestCase
 from .task import case_task
-from specialtest.models import *
 
 # 封装分页处理
 def get_paginator(request, data):
@@ -38,7 +37,6 @@ def project(request):
     projects = Project.objects.filter().order_by('-id')  # 使用负id是为了倒序取出项目数据
     # logging.info("projects:{}", projects.number)  # 打印项目名称
     # 构造流量回放的数据
-    ApiData.objects.create(target_api="project/", api_request_data=request, api_response_data=render(request, 'project.html', {'projects': get_paginator(request, projects)}))
     return render(request, 'project.html', {'projects': get_paginator(request, projects)})
 
 
