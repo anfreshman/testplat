@@ -4,16 +4,11 @@ import os
 import json
 import traceback
 import redis
-from InterfaceAutoTest.settings import redis_port
 
 
-# 连接redis
-pool = redis.ConnectionPool(host='127.0.0.1', port=redis_port, decode_responses=True)
-redis_obj = redis.Redis(connection_pool=pool)
 
 
-# 初始化框架工程中的全局变量，存储在测试数据中的唯一值数据
-# 框架工程中若要使用字典中的任意一个变量，则每次使用后，均需要将字典中的value值进行加1操作。
+
 def get_unique_number_value(unique_number):
     data = None
     try:
@@ -136,3 +131,12 @@ def assert_result(response_obj, key_word):
 # 测试代码
 if __name__ == "__main__":
     print(get_unique_number_value("unique_num1"))
+
+
+# 请求参数分离
+def get_request_param():
+    pass
+
+# 构造pytest请求
+def common_test():
+    pass

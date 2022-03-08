@@ -46,6 +46,20 @@ class TestCase(models.Model):
         verbose_name_plural = '测试用例表'
 
 
+# 线上接口的数据，每次发布自动获取最新的接口请求内容，用于流量回放，目前是每次都捕获，集成上流水线之后变为发布后第一次捕获。
+class ApiData(models.Model):
+    id = models.AutoField(primary_key=True)
+    target_api = models.URLField('目标http接口')
+    api_request_data = models.TextField('请求内容')
+    api_response_data = models.TextField('响应内容')
+
+    def __str__(self):
+        return self.target_api
+
+    class Meta:
+        verbose_name = '流量离线数据'
+        verbose_name_plural = '流量离线数据'
+
 
 class InterfaceServer(models.Model):
     id = models.AutoField(primary_key=True)

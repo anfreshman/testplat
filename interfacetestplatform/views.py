@@ -119,7 +119,7 @@ def get_server_address(env):
 # 测试用例菜单项
 @login_required
 def test_case(request):
-    print("request.session['is_login']: {}".format(request.session['is_login']))
+    # print("request.session['is_login']: {}".format(request.session['is_login']))
     test_cases = ""
     # 页面获取
     if request.method == "GET":
