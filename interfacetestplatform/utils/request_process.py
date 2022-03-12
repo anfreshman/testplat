@@ -1,5 +1,6 @@
 import requests
 import json
+import pytest
 # from Util.Log import logger
 
 
@@ -51,3 +52,9 @@ def request_process(url, request_method, request_content):
             print("put方法请求发生异常：请求的url是%s, 请求的内容是%s\n发生的异常信息如下：%s" % (url, request_content, e))
             r = None
         return r
+
+
+
+
+if __name__ == "__main__":
+    pytest.main(['../../test_report/test_util'])

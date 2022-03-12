@@ -6,28 +6,6 @@ import traceback
 import redis
 
 
-
-
-
-def get_unique_number_value(unique_number):
-    data = None
-    try:
-        redis_value = redis_obj.get(unique_number)  # {"unique_number"：666}
-        if redis_value:
-            data = redis_value
-            print("全局唯一数当前生成的值是：%s" % data)
-            # 把redis中key为unique_number的值进行加一操作，以便下提取时保持唯一
-            redis_obj.set(unique_number, int(redis_value) + 1)
-        else:
-            data = 20300  # 初始化递增数值
-            redis_obj.set(unique_number, data)
-    except Exception as e:
-        print("获取全局唯一数变量值失败，请求的全局唯一数变量是%s,异常原因如下：%s" % (unique_number, traceback.format_exc()))
-        data = None
-    finally:
-        return data
-
-
 def md5(s):
     m5 = hashlib.md5()
     m5.update(s.encode("utf-8"))
@@ -39,20 +17,6 @@ def md5(s):
 # 将请求数据中包含的${变量名}的字符串部分，替换为唯一数或者全局变量字典中对应的全局变量
 def data_preprocess(global_key, requestData):
     try:
-        # 匹配注册用户名参数，即"${unique_num...}"的格式，并取出本次请求的随机数供后续接口的用户名参数使用
-        if re.search(r"\$\{unique_num\d+\}", requestData):
-            var_name = re.search(r"\$\{(unique_num\d+)\}", requestData).group(1)  # 获取用户名参数
-            print("用户名变量：%s" % var_name)
-            var_value = get_unique_number_value(var_name)
-            print("用户名变量值：%s" % var_value)
-            requestData = re.sub(r"\$\{unique_num\d+\}", str(var_value), requestData)
-            var_name = var_name.split("_")[1]
-            print("关联的用户名变量：%s" % var_name)
-            # "xxxkey" ："{'var_name'：var_value}"
-            global_var = json.loads(os.environ[global_key])
-            global_var[var_name] = var_value
-            os.environ[global_key] = json.dumps(global_var)
-            print("用户名唯一数参数化后的全局变量【os.environ[global_key]】：{}".format(os.environ[global_key]))
         # 函数化，如密码加密"${md5(...)}"的格式
         if re.search(r"\$\{\w+\(.+\)\}", requestData):
             var_pass = re.search(r"\$\{(\w+\(.+\))\}", requestData).group(1)  # 获取密码参数

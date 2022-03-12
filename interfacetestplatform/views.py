@@ -112,7 +112,7 @@ def get_server_address(env):
             print("server_address: {}".format(server_address))
             return server_address
         else:
-            return ""
+            return "http://127.0.0.1:8000"
     else:
         return ""
 
@@ -139,11 +139,12 @@ def test_case(request):
             print("test_case_id_list: {}".format(test_case_id_list))
             print("获取到用例，开始用例执行")
             # 普通执行
-            # case_task(test_case_id_list, server_address)
+            case_task(test_case_id_list, server_address)
             # celery 执行
-            case_task.apply_async((test_case_id_list, server_address))
+            # 多线程执行
+            # case_task.apply_async((test_case_id_list, server_address))
         else:
             print("运行测试用例失败")
-            return HttpResponse("提交的运行测试用例为空，请选择用例后在提交！")
+            return HttpResponse("提交的运行测试用例为空，请选择用例后在提交！!!!!!!")
         test_cases = models.TestCase.objects.filter().order_by('id')
     return render(request, 'test_case.html', {'test_cases': get_paginator(request, test_cases)})

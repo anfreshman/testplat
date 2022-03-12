@@ -20,3 +20,4 @@ def truncate_yaml(yaml_file):
     with open(yaml_file, 'w') as f:
         f.truncate()
 
+
