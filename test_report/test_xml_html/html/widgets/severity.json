@@ -1,0 +1,11 @@
+[ {
+  "uid" : "e8248f36a7f05c03",
+  "name" : "test_common_request",
+  "time" : {
+    "start" : 1647134545887,
+    "stop" : 1647134545887,
+    "duration" : 0
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]

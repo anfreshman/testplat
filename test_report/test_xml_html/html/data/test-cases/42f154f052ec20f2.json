@@ -1,0 +1,56 @@
+{
+  "uid" : "42f154f052ec20f2",
+  "name" : "test_common_request",
+  "fullName" : "test_report.test_util.test_common_api.TestCommon#test_common_request",
+  "historyId" : "14665629441eb0178083bd980dd197cf",
+  "time" : {
+    "start" : 1647134497098,
+    "stop" : 1647134497098,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "_pytest.fixtures.FixtureLookupError: ('reqeust_param', <FixtureRequest for <Function test_common_request>>)",
+  "statusTrace" : "file E:\\pythonProject\\TestPlat\\test_report\\test_util\\test_common_api.py, line 11\n      def test_common_request(self, reqeust_param):\nE       fixture 'reqeust_param' not found\n>       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nE:\\pythonProject\\TestPlat\\test_report\\test_util\\test_common_api.py:11",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test_report.test_util"
+  }, {
+    "name" : "suite",
+    "value" : "test_common_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestCommon"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-9V8NGGS"
+  }, {
+    "name" : "thread",
+    "value" : "26700-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_report.test_util.test_common_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "42f154f052ec20f2.json",
+  "parameterValues" : [ ]
+}
